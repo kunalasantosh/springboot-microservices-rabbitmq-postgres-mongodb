@@ -36,26 +36,9 @@ This repo uses a small commerce workflow because it is simple to explain and it 
 
 ## Architecture
 
-```text
-Client
-  |
-  v
-order-service (Spring Boot + PostgreSQL)
-  |  REST: POST /api/orders
-  |  Publishes: OrderCreatedEvent
-  v
-RabbitMQ
-  |
-  v
-inventory-service (Spring Boot + MongoDB)
-  |  Consumes: OrderCreatedEvent
-  |  Publishes: InventoryReservedEvent / InventoryRejectedEvent
-  v
-RabbitMQ
-  |
-  v
-notification-service (Spring Boot)
-```
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/de9e6d76-9105-4713-a108-e4828a4df37d" />
+
+
 
 ## Why this is a solid portfolio repo
 
